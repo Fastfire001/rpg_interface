@@ -1,6 +1,6 @@
-import {defineComponent} from '../vue@3.2.47.vue.esm-browser.js'
+import {defineComponent} from '/dependencies/vuejs/vue@3.2.47.vue.esm-browser.js'
 
-let itemList = defineComponent({
+const itemList = defineComponent({
     name: 'item-list',
 
     template: `
