@@ -10,8 +10,7 @@ const itemService = {
     },
 
     createDefaultItem() {
-        const item = new Item('test', 'descr', 1, 2, 3);
-        console.log(item.name())
+        return new Item('test', 'descr', 1, 2, 3, 4);
     }
 
 }

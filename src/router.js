@@ -1,10 +1,10 @@
-import itemList from '/src/page/itemList.js'
+import inventory from '/src/page/inventory.js'
 import character from '/src/page/character.js'
 
 const router = Vue.defineComponent({
     name: 'router',
     components: {
-        itemList,
+        inventory,
         character
     },
 
@@ -34,8 +34,8 @@ const router = Vue.defineComponent({
                     default: true
                 },
                 {
-                    component: 'item-List',
-                    name: 'Object',
+                    component: 'inventory',
+                    name: 'Inventaire',
                     default: false
                 },
             ]

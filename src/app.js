@@ -20,11 +20,14 @@ import Item from '/src/dto/item.js'
 import itemService from '/src/service/itemService.js'
 
 //store
-import itemStore from "/src/store/itemStore.js";
+import itemStore from "/src/store/inventoryStore.js";
 
 //page
-import itemList from "/src/page/itemList.js";
+import inventory from "/src/page/inventory.js";
 import character from '/src/page/character.js'
+
+//component
+import inventorySlot from "/src/component/inventorySlot.js";
 
 Vue.use(Pinia.PiniaVuePlugin)
 new Vue({

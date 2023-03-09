@@ -1,20 +1,20 @@
-import itemStore from "/src/store/itemStore.js";
+// import itemStore from "/src/store/inventoryStore.js";
 
 const character = Vue.defineComponent({
     name: 'character',
 
     template: `
         <div>
-            <p>Character</p>
-            <button @click="incrementTest">{{ test }}</button>
+            <h1>Character</h1>
+<!--            <button @click="incrementTest">{{ test }}</button>-->
         </div>
     `,
 
-    computed: {
-        ...Pinia.mapState(itemStore, [
-            'test'
-        ]),
-    },
+    // computed: {
+        // ...Pinia.mapState(itemStore, [
+        //     'test'
+        // ]),
+    // },
 
     data() {
         return {
@@ -22,11 +22,11 @@ const character = Vue.defineComponent({
         }
     },
 
-    methods: {
-        ...Pinia.mapActions(itemStore, [
-            'incrementTest'
-        ]),
-    },
+    // methods: {
+    //     ...Pinia.mapActions(itemStore, [
+    //         'incrementTest'
+    //     ]),
+    // },
 
 })
 
