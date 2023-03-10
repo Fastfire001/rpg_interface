@@ -1,16 +1,3 @@
-// const useCounterStore = Pinia.defineStore('counter', {
-//     state() {
-//         return {
-//             value: 0
-//         }
-//     },
-//     actions: {
-//         increment(state) {
-//             this.value++
-//         }
-//     }
-// })
-//
 import router from "/src/router.js";
 
 //dto
@@ -28,6 +15,7 @@ import character from '/src/page/character.js'
 
 //component
 import inventorySlot from "/src/component/inventorySlot.js";
+import itemForm from "/src/component/itemForm.js";
 
 Vue.use(Pinia.PiniaVuePlugin)
 new Vue({

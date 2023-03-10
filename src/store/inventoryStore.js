@@ -109,4 +109,26 @@ const inventoryStore = Pinia.defineStore('inventory', {
     }
 });
 
+
+const getGold = ['gold']
+const getBelt = ['belt1', 'belt2', 'belt3']
+const getBack = ['back1', 'back2', 'back3']
+const getBackpack = [
+    'backpack1', 'backpack2', 'backpack3', 'backpack4', 'backpack5', 'backpack6', 'backpack7',
+    'backpack8', 'backpack9', 'backpack10', 'backpack11', 'backpack12', 'backpack13', 'backpack14',
+    'backpack15'
+]
+const getHarness = ['harness']
+
+const setGold = ['setGold']
+const setBelt = ['setBelt1', 'setBelt2', 'setBelt3']
+const setBack = ['setBack1', 'setBack2', 'setBack3']
+const setBackpack = [
+    'setBackpack1', 'setBackpack2', 'setBackpack3', 'setBackpack4', 'setBackpack5', 'setBackpack6', 'setBackpack7',
+    'setBackpack8', 'setBackpack9', 'setBackpack10', 'setBackpack11', 'setBackpack12', 'setBackpack13', 'setBackpack14',
+    'setBackpack15'
+]
+const setHarness = ['setHarness']
+
+export { inventoryStore, getGold, getBelt, getBack, getBackpack, getHarness, setGold, setBelt, setBack, setBackpack, setHarness }
 export default inventoryStore
