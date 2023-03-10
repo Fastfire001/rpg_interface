@@ -1,6 +1,8 @@
 const inventoryStore = Pinia.defineStore('inventory', {
     state() {
         return {
+            selectedSlot: null,
+
             gold: 0,
             belt1: null,
             belt2: null,
@@ -32,6 +34,9 @@ const inventoryStore = Pinia.defineStore('inventory', {
     },
 
     actions: {
+        setSelectedSlot(selectedSlot) {
+            this.selectedSlot = selectedSlot
+        },
         setGold(gold) {
             this.gold = gold
         },

@@ -9,8 +9,8 @@ const itemService = {
 
     },
 
-    createDefaultItem() {
-        return new Item('test', 'descr', 1, 2, 3, 4);
+    createDefaultItem(name = 'test') {
+        return new Item(name, 'descr', 1, 2, 3, 4);
     }
 
 }
