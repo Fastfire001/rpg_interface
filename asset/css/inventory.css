@@ -1,16 +1,17 @@
 .inv-table {
+    width: 100%;
     border-collapse: collapse;
     border: black solid 1px;
-    margin-bottom: 15px;
 }
 
 .inv-table tr {
-    border: black solid 1px;
+
     height: 15px;
 }
 
 .inv-table tr td {
     padding: 2px;
+    border: black solid 1px;
 }
 
 .inv-table tr td p {

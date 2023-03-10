@@ -4,14 +4,15 @@ const inventorySlot = Vue.defineComponent({
     name: 'inventory-slot',
 
     template: `
-        <div>
-            <p v-if="item && item.name">{{ test(item.name) }}</p>
+        <div @click="emitSelectSlot">
+            <p v-if="item && item.name">{{ item.name }}</p>
             <p v-else>Vide</p>
         </div>
     `,
 
     props: [
-        'item'
+        'item',
+        'itemSlot'
     ],
 
     data() {
@@ -21,10 +22,9 @@ const inventorySlot = Vue.defineComponent({
     },
 
     methods: {
-        test(a) {
-            console.log(a)
-            return a
-        }
+        emitSelectSlot() {
+            this.$emit('select-slot', this.itemSlot)
+        },
     },
 
 })
