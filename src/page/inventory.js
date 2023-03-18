@@ -22,7 +22,7 @@ const inventory = Vue.defineComponent({
                 <div class="w-50">
                     <table class="inv-table mb-2">
                         <tr>
-                            <td rowspan="1" class="w-25">bourse</td>
+                            <td rowspan="1" class="w-25">Bourse</td>
                             <td class="text-center">
                                 <input type="number" class="form-control w-50 d-inline" v-model="dataGold">
                                 <button class="btn-primary btn" @click.prevent="saveGold">Enregistrer</button>
