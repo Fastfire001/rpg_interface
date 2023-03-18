@@ -23,7 +23,10 @@ const inventory = Vue.defineComponent({
                     <table class="inv-table mb-2">
                         <tr>
                             <td rowspan="1" class="w-25">bourse</td>
-                            <td>{{ this.gold }}</td>
+                            <td class="text-center">
+                                <input type="number" class="form-control w-50 d-inline" v-model="dataGold">
+                                <button class="btn-primary btn" @click.prevent="saveGold">Enregistrer</button>
+                            </td>
                         </tr>
                     </table>
                     
@@ -94,6 +97,7 @@ const inventory = Vue.defineComponent({
 
     data() {
         return {
+            dataGold: 0
         }
     },
 
@@ -128,8 +132,16 @@ const inventory = Vue.defineComponent({
 
         getSetter(string) {
             return 'set'+string.charAt(0).toUpperCase() + string.slice(1);
+        },
+
+        saveGold() {
+            this.setGold(this.dataGold)
         }
     },
+
+    created() {
+        this.dataGold = this.gold;
+    }
 })
 
 export default inventory
