@@ -1,5 +1,5 @@
 import itemService from '/src/service/itemService.js'
-import { inventoryStore, getGold, getBelt, getBack, getBackpack, getHarness, setGold, setBelt, setBack, setBackpack, setHarness } from "/src/store/inventoryStore.js";
+import { characterStore, getGold, getBelt, getBack, getBackpack, getHarness, setGold, setBelt, setBack, setBackpack, setHarness } from "/src/store/characterStore.js";
 import inventorySlot from "/src/component/inventorySlot.js";
 import itemForm from "/src/component/itemForm.js";
 
@@ -85,7 +85,7 @@ const inventory = Vue.defineComponent({
     `,
 
     computed: {
-        ...Pinia.mapState(inventoryStore, [
+        ...Pinia.mapState(characterStore, [
             'selectedSlot',
             ...getGold,
             ...getBelt,
@@ -102,7 +102,7 @@ const inventory = Vue.defineComponent({
     },
 
     methods: {
-        ...Pinia.mapActions(inventoryStore, [
+        ...Pinia.mapActions(characterStore, [
             'setSelectedSlot',
             ...setGold,
             ...setBelt,

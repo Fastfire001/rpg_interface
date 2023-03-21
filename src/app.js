@@ -7,7 +7,7 @@ import Item from '/src/dto/item.js'
 import itemService from '/src/service/itemService.js'
 
 //store
-import itemStore from "/src/store/inventoryStore.js";
+import characterStore from "/src/store/characterStore.js";
 
 //page
 import inventory from "/src/page/inventory.js";

@@ -1,4 +1,4 @@
-import inventoryStore from "/src/store/inventoryStore.js";
+import characterStore from "/src/store/characterStore.js";
 
 const inventorySlot = Vue.defineComponent({
     name: 'inventory-slot',
@@ -20,7 +20,7 @@ const inventorySlot = Vue.defineComponent({
     ],
 
     computed: {
-        ...Pinia.mapState(inventoryStore, [
+        ...Pinia.mapState(characterStore, [
             'selectedSlot',
         ]),
 

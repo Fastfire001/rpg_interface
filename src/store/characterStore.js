@@ -1,4 +1,4 @@
-const inventoryStore = Pinia.defineStore('inventory', {
+const characterStore = Pinia.defineStore('inventory', {
     state() {
         return {
             selectedSlot: null,
@@ -130,5 +130,5 @@ const setBackpack = [
 ]
 const setHarness = ['setHarness']
 
-export { inventoryStore, getGold, getBelt, getBack, getBackpack, getHarness, setGold, setBelt, setBack, setBackpack, setHarness }
-export default inventoryStore
+export { characterStore, getGold, getBelt, getBack, getBackpack, getHarness, setGold, setBelt, setBack, setBackpack, setHarness }
+export default characterStore
