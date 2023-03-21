@@ -26,6 +26,21 @@ const characterStore = Pinia.defineStore('inventory', {
             backpack14: null,
             backpack15: null,
             harness: null,
+
+            head: null,
+            face: null,
+            neck: null,
+            chest: null,
+            leftShoulder: null,
+            rightShoulder: null,
+            leftHand: null,
+            rightHand: null,
+            ring1: null,
+            ring2: null,
+            ring3: null,
+            belt: null,
+            legs: null,
+            feet: null,
         }
     },
 
@@ -105,7 +120,49 @@ const characterStore = Pinia.defineStore('inventory', {
         },
         setHarness(harness) {
             this.harness = harness
-        }
+        },
+        setHead(head) {
+            this.head = head
+        },
+        setFace(face) {
+            this.face = face
+        },
+        setNeck(neck) {
+            this.neck = neck
+        },
+        setChest(chest) {
+            this.chest = chest
+        },
+        setLeftShoulder(leftShoulder) {
+            this.leftShoulder = leftShoulder
+        },
+        setRightShoulder(rightShoulder) {
+            this.rightShoulder = rightShoulder
+        },
+        setLeftHand(leftHand) {
+            this.leftHand = leftHand
+        },
+        setRightHand(rightHand) {
+            this.rightHand = rightHand
+        },
+        setRing1(ring1) {
+            this.ring1 = ring1
+        },
+        setRing2(ring2) {
+            this.ring2 = ring2
+        },
+        setRing3(ring3) {
+            this.ring3 = ring3
+        },
+        setBelt(belt) {
+            this.belt = belt
+        },
+        setLegs(legs) {
+            this.legs = legs
+        },
+        setFeet(feet) {
+            this.feet = feet
+        },
     }
 });
 
@@ -130,5 +187,16 @@ const setBackpack = [
 ]
 const setHarness = ['setHarness']
 
-export { characterStore, getGold, getBelt, getBack, getBackpack, getHarness, setGold, setBelt, setBack, setBackpack, setHarness }
+const getCharacter = ['head', 'face', 'neck', 'chest', 'leftShoulder', 'rightShoulder', 'leftHand', 'rightHand',
+    'ring1', 'ring2', 'ring3', 'belt', 'legs', 'feet'
+]
+
+const setCharacter = ['setHead', 'setFace', 'setNeck', 'setChest', 'setLeftShoulder', 'setRightShoulder', 'setLeftHand',
+    'setRightHand', 'setRing1', 'setRing2', 'setRing3', 'setBelt', 'setLegs', 'setFeet'
+]
+
+export {
+    characterStore, getGold, getBelt, getBack, getBackpack, getHarness, setGold, setBelt, setBack, setBackpack, setHarness,
+    getCharacter, setCharacter
+}
 export default characterStore

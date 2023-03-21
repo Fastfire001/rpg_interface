@@ -1,5 +1,6 @@
 import inventory from '/src/page/inventory.js'
 import character from '/src/page/character.js'
+import {characterStore} from "/src/store/characterStore.js";
 
 const router = Vue.defineComponent({
     name: 'router',
@@ -14,7 +15,7 @@ const router = Vue.defineComponent({
                 <ul class="d-flex flex-row justify-content-evenly">
                     <li class="list-unstyled" v-for="menu in menus">
                         <label class="btn btn-primary" :for="menu.component">{{ menu.name }}</label>
-                        <input type="radio" name="select-menu" class="d-none"
+                        <input type="radio" name="select-menu" class="d-none" @click="resetSelectedSlot"
                                :id="menu.component" :checked="menu.default" :value="menu.component" v-model="value">
                     </li>
                 </ul>
@@ -23,6 +24,12 @@ const router = Vue.defineComponent({
             <component :is="value"/>
         </div>
     `,
+
+    computed: {
+        ...Pinia.mapState(characterStore, [
+            'selectedSlot',
+        ]),
+    },
 
     data() {
         return {
@@ -39,6 +46,16 @@ const router = Vue.defineComponent({
                     default: false
                 },
             ]
+        }
+    },
+
+    methods: {
+        ...Pinia.mapActions(characterStore, [
+            'setSelectedSlot',
+        ]),
+
+        resetSelectedSlot() {
+            this.setSelectedSlot(null)
         }
     },
 })
