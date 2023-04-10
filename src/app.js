@@ -11,7 +11,8 @@ import characterStore from "/src/store/characterStore.js";
 
 //page
 import inventory from "/src/page/inventory.js";
-import character from '/src/page/equipment.js'
+import equipment from '/src/page/equipment.js';
+import character from '/src/page/character.js';
 
 //component
 import inventorySlot from "/src/component/inventorySlot.js";

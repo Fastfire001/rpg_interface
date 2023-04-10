@@ -1,6 +1,9 @@
 const characterStore = Pinia.defineStore('inventory', {
     state() {
         return {
+            name: 'Nom du personnage',
+            description: 'Description du personnage',
+
             selectedSlot: null,
 
             gold: 0,
@@ -41,6 +44,8 @@ const characterStore = Pinia.defineStore('inventory', {
             belt: null,
             legs: null,
             feet: null,
+
+
         }
     },
 
@@ -49,6 +54,13 @@ const characterStore = Pinia.defineStore('inventory', {
     },
 
     actions: {
+        setName(name) {
+            console.log(2);
+            this.name = name
+        },
+        setDescription(description) {
+            this.description = description
+        },
         setSelectedSlot(selectedSlot) {
             this.selectedSlot = selectedSlot
         },
