@@ -1,12 +1,14 @@
 import inventory from '/src/page/inventory.js'
 import equipment from '/src/page/equipment.js'
+import character from '/src/page/character.js';
 import {characterStore} from "/src/store/characterStore.js";
 
 const router = Vue.defineComponent({
     name: 'router',
     components: {
         inventory,
-        equipment
+        equipment,
+        character
     },
 
     template: `
@@ -33,18 +35,23 @@ const router = Vue.defineComponent({
 
     data() {
         return {
-            value: 'equipment',
+            value: 'character',
             menus: [
                 {
-                    component: 'equipment',
-                    name: 'Equipement',
+                    component: 'character',
+                    name: 'Personnage',
                     default: true
                 },
                 {
-                    component: 'inventory',
-                    name: 'Inventaire',
+                    component: 'equipment',
+                    name: 'Equipement',
                     default: false
                 },
+                // {
+                //     component: 'inventory',
+                //     name: 'Inventaire',
+                //     default: false
+                // },
             ]
         }
     },
