@@ -43,6 +43,7 @@ const itemForm = Vue.defineComponent({
                 <input type="number" id="stamina" class="form-control" v-model="item.stamina">
                 
                 <div class="btn btn-primary mt-3" @click="close">Valider</div>
+                <div class="btn btn-danger mt-3" @click="remove">Supprimer</div>
             </form>
         </div> 
     `,
@@ -80,6 +81,11 @@ const itemForm = Vue.defineComponent({
             ...setBackpack,
             ...setHarness,
         ]),
+
+        remove() {
+            this[this.getSetter(this.selectedSlot)](null)
+            this.setSelectedSlot(null)
+        },
 
         close() {
             this[this.getSetter(this.selectedSlot)](this.item)
