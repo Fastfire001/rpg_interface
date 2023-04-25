@@ -1,5 +1,16 @@
 import {
-    characterStore, getBelt, getBack, getBackpack, getHarness, getGold, setGold, setBelt, setBack, setBackpack, setHarness
+    characterStore,
+    getBelt,
+    getBack,
+    getBackpack,
+    getHarness,
+    getGold,
+    setGold,
+    setBelt,
+    setBack,
+    setBackpack,
+    setHarness,
+    getCharacter, setCharacter
 } from "/src/store/characterStore.js";
 import Item from '/src/dto/item.js'
 
@@ -31,16 +42,16 @@ const itemForm = Vue.defineComponent({
                 
                 <label for="dexterity">Dextérité</label>
                 <input type="number" id="dexterity" class="form-control" v-model="item.dexterity">
+
+                <br>
+                
+                <label for="stamina">Endurance</label>
+                <input type="number" id="stamina" class="form-control" v-model="item.stamina">
                 
                 <br>
                 
                 <label for="charisma">Charisme</label>
                 <input type="number" id="charisma" class="form-control" v-model="item.charisma">
-                
-                <br>
-                
-                <label for="stamina">Endurance</label>
-                <input type="number" id="stamina" class="form-control" v-model="item.stamina">
                 
                 <div class="btn btn-primary mt-3" @click="close">Valider</div>
                 <div class="btn btn-danger mt-3" @click="remove">Supprimer</div>
@@ -56,6 +67,7 @@ const itemForm = Vue.defineComponent({
             ...getBack,
             ...getBackpack,
             ...getHarness,
+            ...getCharacter,
         ]),
 
         item() {
@@ -80,6 +92,7 @@ const itemForm = Vue.defineComponent({
             ...setBack,
             ...setBackpack,
             ...setHarness,
+            ...setCharacter,
         ]),
 
         remove() {

@@ -1,3 +1,5 @@
+import Item from "/src/dto/item.js";
+
 const characterStore = Pinia.defineStore('inventory', {
     state() {
         return {
@@ -50,12 +52,88 @@ const characterStore = Pinia.defineStore('inventory', {
     },
 
     getters: {
+        getAllEquipedItem() {
+            return [
+                this.head,
+                this.face,
+                this.neck,
+                this.chest,
+                this.leftShoulder,
+                this.rightShoulder,
+                this.leftHand,
+                this.rightHand,
+                this.ring1,
+                this.ring2,
+                this.ring3,
+                this.belt,
+                this.legs,
+                this.feet,
+            ]
+        },
 
+        getIntel() {
+            let intel = 0
+            this.getAllEquipedItem.forEach(
+                item => {
+                    if (item instanceof Item) {
+                        intel = intel + parseInt(item.intel)
+                    }
+                }
+            )
+            return intel
+        },
+
+        getStrength() {
+            let strength = 0
+            this.getAllEquipedItem.forEach(
+                item => {
+                    if (item instanceof Item) {
+                        strength = strength + parseInt(item.strength)
+                    }
+                }
+            )
+            return strength
+        },
+
+        getDexterity() {
+            let dexterity = 0
+            this.getAllEquipedItem.forEach(
+                item => {
+                    if (item instanceof Item) {
+                        dexterity = dexterity + parseInt(item.dexterity)
+                    }
+                }
+            )
+            return dexterity
+        },
+
+        getStamina() {
+            let stamina = 0
+            this.getAllEquipedItem.forEach(
+                item => {
+                    if (item instanceof Item) {
+                        stamina = stamina + parseInt(item.stamina)
+                    }
+                }
+            )
+            return stamina
+        },
+
+        getCharisma() {
+            let charisma = 0
+            this.getAllEquipedItem.forEach(
+                item => {
+                    if (item instanceof Item) {
+                        charisma = charisma + parseInt(item.charisma)
+                    }
+                }
+            )
+            return charisma
+        },
     },
 
     actions: {
         setName(name) {
-            console.log(2);
             this.name = name
         },
         setDescription(description) {
